@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(image.webp) no-repeat center center/cover;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  color: white;
+  width: 700px;
+  max-width: 95%;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  border: 1px solid rgb(128, 41, 70);
+  border-radius: 4px;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+}
+
+.maincontent {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.quote {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.person {
+  text-align: center;
+  color: rgb(255, 71, 117);
+  margin-top: 5px;
+}
+
+.newquote {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid rgb(255, 71, 117);
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.newquote:hover {
+  background-color: rgba(245, 244, 244, 0.5);
+}
+
+.newquote:active {
+  transform: scale(0.95);
+  background-color: rgb(255, 71, 117);
+}
+
+.wrapper {
+  text-align: center;
+}
+
+/* Fade animations */
+.quote, .person {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .quote {
+    font-size: 1rem;
+  }
+  .person {
+    font-size: 0.9rem;
+  }
+  .header {
+    width: 120px;
+    font-size: 9px;
+  }
+  .container {
+    width: 90%;
+  }
+}
